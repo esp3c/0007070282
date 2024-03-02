@@ -17,12 +17,13 @@ def text_to_morse(text):
             morse += morse_code[char] + ' '
     return morse
 
-# Configurar el emisor
-HOST = '127.0.0.1'  # IP del receptor
-PORT = 65432        # Puerto para la conexión
+# Obtener la dirección IP local
+HOST = socket.gethostbyname(socket.gethostname())
+# Utilizar un puerto disponible
+PORT = 65432
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.connect((HOST, PORT))  # Corregir aquí
+    s.connect((HOST, PORT))
     while True:
         mensaje = input("Ingrese el mensaje a enviar: ")
         morse = text_to_morse(mensaje)
