@@ -1,8 +1,8 @@
 import socket
 
 # Configure the receiver
-RECEIVER_HOST = '172.22.144.1'  # IP address of the receiver
-RECEIVER_PORT = 8080             # Port for connection
+RECEIVER_HOST = '107.20.139.170'  # IP address of the receiver
+RECEIVER_PORT = 443             # Port for connection
 
 # Morse code dictionary
 MORSE_CODE_DICT = {
